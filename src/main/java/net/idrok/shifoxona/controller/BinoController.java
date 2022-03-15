@@ -22,20 +22,22 @@ public class BinoController {
     BinoService binoService;
 
     @GetMapping
-    public List<Bino> getAll(){
+    public List<Bino> getAll() {
         return binoService.getAll();
     }
+
     @PostMapping
-    public Bino create(@RequestBody Bino bino){
+    public Bino create(@RequestBody Bino bino) {
         return binoService.create(bino);
     }
 
     @PutMapping
-    public Bino update(@RequestBody Bino bino){
+    public Bino update(@RequestBody Bino bino) {
         return binoService.update(bino);
     }
+
     @DeleteMapping("/{id}")
-    public void update(@PathVariable Long id){
+    public void update(@PathVariable Long id) {
         binoService.deleteById(id);
     }
 }
