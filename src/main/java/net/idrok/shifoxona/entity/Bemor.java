@@ -1,10 +1,7 @@
 package net.idrok.shifoxona.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -27,21 +24,22 @@ public class Bemor {
     @NotNull
     private String manzil;
 
-    private Viloyat valoyat;
+    private Viloyat viloyat;
 
+    @ManyToOne
     private Tuman tuman;
 
     public Bemor() {
     }
 
     public Bemor(Long id, @NotNull String ism, @NotNull String familiya, @NotNull String sharf, @NotNull String manzil,
-            Viloyat valoyat, Tuman tuman) {
+            Viloyat viloyat, Tuman tuman) {
         this.id = id;
         this.ism = ism;
         this.familiya = familiya;
         this.sharf = sharf;
         this.manzil = manzil;
-        this.valoyat = valoyat;
+        this.viloyat = viloyat;
         this.tuman = tuman;
     }
 
@@ -86,11 +84,11 @@ public class Bemor {
     }
 
     public Viloyat getValoyat() {
-        return valoyat;
+        return viloyat;
     }
 
     public void setValoyat(Viloyat valoyat) {
-        this.valoyat = valoyat;
+        this.viloyat = valoyat;
     }
 
     public Tuman getTuman() {
