@@ -16,9 +16,10 @@ import net.idrok.shifoxona.service.XonaService;
 
 @RestController
 @RequestMapping("/api/xona")
-public class BinoController {
+public class XonaController {
 
-    public final XonaController xonaController;
+    public final XonaService xonaService;
+    
     public XonaController(XonaService xonaService){
         this.xonaService = xonaService;
 }
