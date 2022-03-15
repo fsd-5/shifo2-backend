@@ -4,6 +4,7 @@ package net.idrok.shifoxona.service;
 import net.idrok.shifoxona.entity.Xona;
 import net.idrok.shifoxona.repository.XonaRepository;
 
+@Service
 public class XonaService {
     private final XonaRepository xonaRepository;
 
@@ -11,6 +12,11 @@ public class XonaService {
     public XonaService(XonaRepository xonaRepository) {
         this.xonaRepository = xonaRepository;
     }
+
+    public List<Xona> getAll(){
+        return xonaRepository.findAll();
+    }
+
 
     public Xona create(Xona xona){
         if(xona.getId() == null)
