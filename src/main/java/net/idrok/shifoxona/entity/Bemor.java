@@ -12,7 +12,6 @@ public class Bemor {
     private Long id;
 
     @NotNull
-    @Column(length = 30)
     private String ism;
 
     @NotNull

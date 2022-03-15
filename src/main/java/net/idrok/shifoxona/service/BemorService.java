@@ -1,13 +1,22 @@
 package net.idrok.shifoxona.service;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import net.idrok.shifoxona.entity.Bemor;
 import net.idrok.shifoxona.repository.BemorRepository;
 
+@Service
 public class BemorService {
     private final BemorRepository bemorRepository;
 
     public BemorService(BemorRepository bemorRepository) {
         this.bemorRepository = bemorRepository;
+    }
+
+    public List<Bemor> getAll() {
+        return bemorRepository.findAll();
     }
 
     public Bemor create(Bemor bemor) {

@@ -1,13 +1,23 @@
 package net.idrok.shifoxona.service;
 
+import java.util.List;
+
 import net.idrok.shifoxona.repository.TumanRepository;
 import net.idrok.shifoxona.entity.Tuman;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class TumanService {
     private final TumanRepository tumanRepository;
 
     public TumanService(TumanRepository tumanRepository) {
         this.tumanRepository = tumanRepository;
+    }
+
+
+    public List<Tuman> getAll() {
+        return tumanRepository.findAll();
     }
 
     public Tuman create(Tuman tuman) {
