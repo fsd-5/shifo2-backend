@@ -28,10 +28,8 @@ public class FakeBaza {
 
 
     public void smenaTuldirish(){
-    smenaService.create(new Smena(faker.hacker().verb(), LocalTime.of(8, 0), LocalTime.of(15, 0), faker.name().title()));
-    smenaService.create(new Smena(faker.hacker().verb(), LocalTime.of(15, 0), LocalTime.of(22, 0), faker.name().title()));
-    smenaService.create(new Smena(faker.hacker().verb(), LocalTime.of(22, 0), LocalTime.of(8, 0), faker.name().title()));
-
-
+        smenaService.create(new Smena(faker.hacker().verb(), LocalTime.of(8, 0), LocalTime.of(15, 0), faker.name().title()));
+        smenaService.create(new Smena(faker.hacker().verb(), LocalTime.of(15, 0), LocalTime.of(22, 0), faker.name().title()));
+        smenaService.create(new Smena(faker.hacker().verb(), LocalTime.of(22, 0), LocalTime.of(8, 0), faker.name().title()));
     }
 }
